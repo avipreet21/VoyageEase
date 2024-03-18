@@ -1,0 +1,540 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 59%;
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 56%;
+
+    }
+}
+
+@media only screen and (min-width: 112.5em) {
+    html {
+        font-size: 65%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    html {
+        font-size: 40%;
+    }
+}
+
+body {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    font-family: sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Hero section */
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden; /* Ensure video does not overflow */
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    object-fit: cover;
+    z-index: -1; /* Ensure the video stays behind other content */
+}
+
+@media only screen and (max-width: 600px){
+    .video-container video {
+        transform: translate(-50%, -50%) scale(1.3);
+    }
+}
+
+
+/* Navbar */
+.navbar {
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2; /* Ensure the navbar appears above other elements */
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+
+}
+
+/* Sign-up button */
+.take_button {
+    color: #fff;
+    background-color: transparent;
+    border: 3px solid #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 20px;
+}
+
+.take_button:hover {
+    background-color: #ff5722;
+}
+
+
+/* Main content */
+.main_content {
+    color: #fafafa;
+    position: absolute;
+    top: 25%;
+    height: 100%;
+    width: 100%;
+
+}
+
+/* Headings */
+.introducing_heading {
+    font-size: 6rem;
+    margin: 1rem 0 3rem;
+    line-height: 8rem;
+}
+
+.introducing_heading_tagline {
+    font-size: 7rem;
+    margin: 2rem 0 ;
+    line-height: 8rem;
+}
+
+
+/* Style for introducing section */
+.Introducing {
+    margin-bottom: 20px;
+    position: relative;
+    text-align: left;
+    left: 8%;
+}
+
+
+/* Style for main menu container */
+.main_menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 150px;
+
+    padding: 20px;
+}
+
+
+.cards_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 225px;
+    height: 350px;
+    background: #000;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    display: flex; /* Add display flex */
+    flex-direction: column; /* Set flex direction to column */
+    justify-content: center; /* Center align content vertically */
+    align-items: center; /* Center align content horizontally */
+    transition: width 0.5s ease;
+}
+
+
+.card_img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.image_text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255); /* Text color */
+    font-size: 32px; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    text-align: center;
+}
+
+.card_img::before {
+    content: '';
+    position: absolute;
+    bottom: -45%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: .9s;
+}
+
+.card:hover .card_img::before {
+    bottom: 0;
+}
+
+.card_img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.card:hover .card_img img {
+    transform: scale(1.1);
+}
+
+.details {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: auto;
+    height: 70%;
+    padding: 2em;
+    background: #000a;
+    backdrop-filter: blur(8px) saturate(120%);
+    transition: .3s;
+    color: #fff;
+    z-index: 2;
+    text-align: center; /* Center align text */
+}
+
+.card:hover .details {
+    bottom: 0;
+}
+
+.details h1 {
+    font-weight: 700;
+}
+
+.details h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+
+.desc {
+    color: #fff;
+    opacity: .8;
+    line-height: 1.3;
+    padding: 20px;
+    margin-bottom: 1em;
+    font-size: auto;
+}
+
+
+.details button {
+    color: #fff;
+    background-color: transparent;
+    border: 3px solid #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em; /* Add margin to the top of the button */
+}
+.details button:hover {
+    background-color: #ff5722;
+}
+
+
+
+/*Weather*/
+
+.weather_content {
+    display: flex;
+    top: 15%;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 800px){
+    .weather_content  {
+        flex-direction: column;
+    }
+}
+.weather_content .take_button:hover{
+    background-color: transparent;
+}
+.image-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+.image-container img {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+
+    object-fit: cover;
+}
+@media only screen and (max-width: 600px){
+    .image-container img  {
+        transform: translate(-50%, -50%) scale(1.3);
+    }
+}
+
+
+.search_container{
+    margin: 0; 
+    padding: 0;
+    background: transparent;
+    display: flex;
+    position: relative;
+    padding: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    align-content: center;
+    margin-bottom: 20px;
+}
+.box{
+    position: relative;
+}
+
+.input {
+    padding: 20px;
+    width: auto;
+
+    background: none;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-size: 26px;
+    color: #ffffff;
+    outline: none;
+    transition: .5s;
+}
+.box:hover input{
+
+    background: transparent;
+    border-radius: 10px;
+    
+
+}
+.box button{
+    margin-left: 5px;
+}
+
+
+.current_day {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    border-radius: 20px;
+    outline-width: 5px;
+    backdrop-filter: blur(20px) saturate(120%);
+}
+.location,.local_time,.wind, .humidity{
+    font-size: 14px;
+    color: #ffffff;
+    padding: 5px;
+}
+.conditions{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.weather_icon {
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    margin-bottom: 8px;
+}
+
+
+
+.current_temp {
+    font-size: 36px;
+    color: #fafafa;
+    align-items: center;
+}
+
+.weather_condition {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #fafafa;
+}
+
+.forecast {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 0;
+    
+}
+
+.day {
+    text-align: center;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    outline-width: 5px;
+    backdrop-filter: blur(20px) saturate(120%);
+}
+
+.date {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #fafafa;
+}
+
+.current_temp,
+.weather_condition {
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .forecast {
+        flex-direction: column;
+    }
+
+    .day {
+        margin-bottom: 20px;
+    }
+}
+
+/* Style for the footer container */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.footer:hover {
+    backdrop-filter: blur(5px) saturate(80%);
+}
+
+
+/* Style for the details section of the footer */
+.details_footer {
+    flex: 1;
+}
+
+/* Style for the heading and sub-heading of VoyageEase */
+.heading_footer {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sub_heading_footer {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Style for the description of VoyageEase */
+.description_heading {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* Style for the credits section of the footer */
+.credits_footer {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for the credits */
+.credits {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+/* Style for the social icons */
+.main-footer__icon {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Style for the social icons container */
+.main_footer_row-1_cont {
+    display: flex;
+}
+
+/* Style for the social icon of Wordpress */
+.main-footer__icon_wordpress {
+    width: 35px;
+    height: auto;
+    background-color: #fafafa;
+    border-radius: 15px;
+}
+
+  

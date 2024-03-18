@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+<script src="weather.js"></script>
+
+
+    <title>VoyageEase:Weather</title>
+</head>
+<body>
+    <div class="hero">
+        <div class="navbar">
+            <a href="index.html"><img src="Images/logo.png" class="logo"></a>
+        </div>
+        <div class="image-container">
+            <img src="Images\weather.jpg" alt="Crowd">
+        </div>
+        <div class="weather_content">
+            <div class="search_container">
+                <div class="box">
+                    <form name="search">
+                        <input id="city" type="text" class="input" name="txt" placeholder="Search.." value="Vancouver"><br>
+                        <button id="submit_button" class="take_button" type="button">Submit</button>
+                    </form>
+                    <i class="fas fa-search"></i>
+                   
+                </div>
+            </div>
+            <div class="structure_weather">
+                <div class="current_day">
+                    <h3 class="location"></h3>
+                    <h3 class="local_time"></h3>
+                    <div class="conditions">
+                        <div class="temp_cond">
+                            <img class="weather_icon" id="weather_icon_day1" src="">
+                            <h1 class="current_temp" id="current_temp_day1"></h1>
+                            <h2 class="weather_condition" id="weather_condition_day1"></h2>
+                        </div>
+                        <div class="other_cond">
+                            <h3 class="wind"></h3>
+                            <h3 class="humidity"></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="forecast" >
+                    <div class="day">
+                        <h1 class="date" id="date2"></h1>
+                        <img class="weather_icon" id="weather_icon_day2" src="">
+                        <h1 class="current_temp" id="current_temp_day2"></h1>
+                    </div>
+                    <div class="day">
+                        <h1 class="date" id="date3"></h1>
+                        <img class="weather_icon" id="weather_icon_day3" src="">
+                        <h1 class="current_temp" id="current_temp_day3"></h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

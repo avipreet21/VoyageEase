@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaflet + Raster Map tiles</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.3.4/leaflet-routing-machine.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@geoapify/geocoder-autocomplete@1.4.0"></script>
+
+  <script src="map.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.3.4/leaflet-routing-machine.min.css" />
+
+  <link rel="stylesheet" href="map.css">
+
+</head>
+<body>
+  <div id="my-map"></div>
+  <div class="autocomplete-panel">
+    <h2 class="headings">From:</h2>
+    <div class="from_panel">
+      <div id="autocomplete" class="autocomplete-container">
+      </div>
+      <button class="map_button" id="my_location">My location</button>
+    </div>
+    <h2 class="headings">To:</h2>
+    <div id="autocomplete2" class="autocomplete-container">
+    </div>
+    <div class="buttons">
+      <button class="map_button" id="onroute">Route</button> 
+      <button class="map_button" id="restart">Clear</button>
+      <div class="recenter">
+        <h2 class="headings">Recenter:</h2>
+        <label class="toggle">
+          <input id="locationToggle" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
