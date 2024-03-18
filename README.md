@@ -1,1 +1,1 @@
-# voyageEase
+# voyageEase.github.io
