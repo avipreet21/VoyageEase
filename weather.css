@@ -1,0 +1,272 @@
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 59%;
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 56%;
+
+    }
+}
+
+@media only screen and (min-width: 112.5em) {
+    html {
+        font-size: 65%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    html {
+        font-size: 40%;
+    }
+}
+
+body {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    font-family: sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Hero section */
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2; /* Ensure the navbar appears above other elements */
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+
+}
+
+/* Sign-up button */
+.take_button {
+    color: #fff;
+    background-color: transparent;
+    border: 3px solid #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 20px;
+}
+
+.take_button:hover {
+    background-color: #ff5722;
+}
+
+
+/* Main content */
+.main_content {
+    color: #fafafa;
+    position: absolute;
+    top: 25%;
+    height: 100%;
+    width: 100%;
+
+}
+
+/*Weather*/
+
+.weather_content {
+    display: flex;
+    top: 15%;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 800px){
+    .weather_content  {
+        flex-direction: column;
+    }
+}
+.weather_content .take_button:hover{
+    background-color: transparent;
+}
+.image-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+.image-container img {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+
+    object-fit: cover;
+}
+@media only screen and (max-width: 600px){
+    .image-container img  {
+        transform: translate(-50%, -50%) scale(1.3);
+    }
+}
+
+
+.search_container{
+    margin: 0; 
+    padding: 0;
+    background: transparent;
+    display: flex;
+    position: relative;
+    padding: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    align-content: center;
+    margin-bottom: 20px;
+}
+.box{
+    position: relative;
+}
+
+.input {
+    padding: 20px;
+    width: auto;
+
+    background: none;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-size: 26px;
+    color: #ffffff;
+    outline: none;
+    transition: .5s;
+}
+.box:hover input{
+
+    background: transparent;
+    border-radius: 10px;
+    
+
+}
+.box button{
+    margin-left: 5px;
+}
+
+
+.current_day {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    border-radius: 20px;
+    outline-width: 5px;
+    backdrop-filter: blur(20px) saturate(120%);
+}
+.location,.local_time,.wind, .humidity{
+    font-size: 14px;
+    color: #ffffff;
+    padding: 5px;
+}
+.conditions{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.weather_icon {
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    margin-bottom: 8px;
+}
+
+
+
+.current_temp {
+    font-size: 36px;
+    color: #fafafa;
+    align-items: center;
+}
+
+.weather_condition {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #fafafa;
+}
+
+.forecast {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 0;
+    
+}
+
+.day {
+    text-align: center;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    outline-width: 5px;
+    backdrop-filter: blur(20px) saturate(120%);
+}
+
+.date {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #fafafa;
+}
+
+.current_temp,
+.weather_condition {
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .forecast {
+        flex-direction: column;
+    }
+
+    .day {
+        margin-bottom: 20px;
+    }
+}
