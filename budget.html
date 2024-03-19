@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <script src="index.js"></script>
+
+    <title>VoyageEase: Budget Planner</title>
+</head>
+<body>
+    <div class="hero">
+        <div class="navbar">
+            <a href="index.html"><img src="Images/logo.png" class="logo"></a>
+        </div>
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="background/flight.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="main_content">
+            <div class = "Introducing" id="Introducing">
+                <h3 class="main_heading">BUDGET PLANNER</h3>
+            </div>
+            <div class = "main_menu" id="main_menu">
+                <div class="entry_box">
+                    <div class="budget_box">
+                        <input type="text" class="budget_entries" id="budget_amount" placeholder="Please Enter you budget here"></input>
+                        <button id="initiate" class="budget_button">Begin</button>
+                        <button id="reset" class="budget_button">reset</button>
+                    </div>
+                    <div class="expense_box">
+                        <input type="text" class="budget_entries" id="expense_title" placeholder=" Please Enter expense title"></input>
+                        <input type="text" class="budget_entries" id="expense_amount" placeholder="Please Enter Expense amount"></input>
+                        <button id="add" class="budget_button">Add Expense</button>
+                    </div>
+                </div>
+                <div class="display_box">
+                    <div class="display_box_amounts">
+                        <div class = "display_entries">
+                            <p class="entry_heading">BUDGET</p>
+                            <span class="entry_amount" id="diplay_budget_amount">0</span>
+                        </div>
+                        <div class = "display_entries">
+                            <p class="entry_heading">EXPENSES</p>
+                            <span class="entry_amount" id="diplay_expense_amount">0</span>
+                        </div>
+                        <div class = "display_entries">
+                            <p class="entry_heading">BALANCE</p>
+                            <span class="entry_amount" id="diplay_bbalance_amount">0</span>
+                        </div>
+                    </div>
+                    <div class="display_expenses">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>     
+    </div>
+    
+</body>
+</html>
