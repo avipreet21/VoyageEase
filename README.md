@@ -1,7 +1,9 @@
 #VoyageEase
+
 VoyageEase is a university-level project aimed at developing a user-friendly website to assist travelers in planning their trips efficiently. The website incorporates essential features such as interactive maps, budget planners, and real-time weather updates, providing users with a comprehensive toolset for seamless travel planning.
 
 ##Introduction
+
 VoyageEase is a project developed as part of a university course, focusing on delivering a practical solution for travel planning. The website aims to cater to users of all levels of technical proficiency by offering a simple and intuitive interface.
 
 ##Objectives
