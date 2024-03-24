@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function() {
             lat_arr[0] = latitude;
             lon_arr[0] = longitude;
             var inputElement = document.querySelector('#autocomplete .geoapify-autocomplete-input');
-            inputElement.placeholder = "My location";
+            inputElement.value = "My Location";
         }
         
     }
