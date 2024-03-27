@@ -35,5 +35,5 @@ Implement alerts and notifications for significant weather changes affecting tra
 # Technology Stack
 
 Frontend: HTML, CSS, JavaScript 
-Mapping API: Google Maps API (free tier for limited usage)
+Mapping API: Geoapify API (free tier for limited usage)
 Weather API: OpenWeatherMap API (free tier for limited usage)
