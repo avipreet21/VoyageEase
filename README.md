@@ -34,8 +34,6 @@ Implement alerts and notifications for significant weather changes affecting tra
 
 # Technology Stack
 
-Frontend: HTML, CSS, JavaScript (Vanilla or simple frameworks like Bootstrap)
-Backend: Node.js (with Express.js for simplicity)
-Database: MongoDB (or any simple database for storing user preferences)
+Frontend: HTML, CSS, JavaScript 
 Mapping API: Google Maps API (free tier for limited usage)
 Weather API: OpenWeatherMap API (free tier for limited usage)
